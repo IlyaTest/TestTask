@@ -1,0 +1,38 @@
+@mixin wrapper ($width) {
+    width: $width;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+@mixin font-settings ($family, $size, $color) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin logo ($float, $main-color, $second-color, $margin...) {
+    float: $float;
+    margin: $margin;
+    font-weight: bold;
+    @include font-settings($font-stack-logo, $font-size-logo, $main-color);
+
+    span span {
+        color: $second-color;
+    }
+}
+
+@mixin tops ($margin-top) {
+    text-align: center;
+    margin-top: $margin-top;
+    @include font-settings($font-stack-main, $font-size-tops, $main-text-color);
+}
+
+@mixin divide-line ($width, $background, $margin...) {
+    display: inline-block;
+    width: $width;
+    height: 1px;
+    background: $background;
+    content: ' ';
+    vertical-align: middle;
+    margin: $margin;
+}

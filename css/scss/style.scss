@@ -1,0 +1,32 @@
+@import "service/reset";
+@import "service/fonts";
+@import "service/variables";
+@import "service/mixins";
+
+.clearfix::after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: '';
+    visibility: hidden;
+}
+
+@media (max-width: 480px) {
+    @import "fragments/480";
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    @import "fragments/481-768";
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    @import "fragments/769-960";
+}
+
+@media (min-width: 961px) and (max-width: 1160px) {
+    @import "fragments/961-1160";
+}
+
+@media (min-width: 1161px) {
+    @import "fragments/1161";
+}
